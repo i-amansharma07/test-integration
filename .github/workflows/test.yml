@@ -24,5 +24,8 @@ jobs:
       - name: Install dependencies
         run:  npm install
 
+      - name : Prisma setup
+        run: npm run db:migrate && npm run db:generate 
+
       - name: Run integration tests
         run:  npm run test:int
