@@ -24,4 +24,19 @@ app.post("/sum", async (req, res) => {
   res.json({ answer: result, id: response.id });
 });
 
+app.post("/multiply", async (req, res) => {
+  const { a, b } = req.body;
+  const result = a * b;
+
+  const response = await prisma.sum.create({
+    data: {
+      a,
+      b,
+      result,
+    },
+  });
+
+  res.json({ answer: result, id: response.id });
+});
+
 export default app;
