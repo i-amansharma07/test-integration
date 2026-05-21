@@ -5,7 +5,6 @@ import request from "supertest";
 describe("POST /sum", () => {
   beforeEach(async () => {
     // Clear the database before each test
-   console.log("*******it ran *******");
   });
 
   it("should return all the stored sums", async () => {
