@@ -11,7 +11,7 @@ app.get("/", async (_req, res) => {
 
 app.post("/sum", async (req, res) => {
   const { a, b } = req.body;
-  const result = a + b;
+  const result = a - b;
 
   const response = await prisma.sum.create({
     data: {
